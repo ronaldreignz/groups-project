@@ -9,7 +9,9 @@ $dbname = "groups_db_awm4";
 $user = "groups_db_awm4_user";
 $password = "zgCCRjPp6mK7E02ZuuP6rLPnJfYhacZO";
 
- $conn = pg_connect("host=$host port=5432 dbname=$dbname user=$user password=$password");
+ $conn_string = "host=$host port=$port dbname=$dbname user=$user password=$password sslmode=require";
+ $conn = pg_connect($conn_string);
+
 
  if (!$conn) {
      die("Connection failed: " . pg_last_error());

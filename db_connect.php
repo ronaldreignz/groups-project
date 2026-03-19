@@ -42,7 +42,7 @@ $password = "zgCCRjPp6mK7E02ZuuP6rLPnJfYhacZO";
        exit();
 }
   
- $result = pg_query($conn,"SELECT * FROM students" ORDER BY id);
+ $result = pg_query($conn,"SELECT * FROM students ORDER BY id");
  if (!$result) {
      die("Query failed: " . pg_last_error($conn));
 }
